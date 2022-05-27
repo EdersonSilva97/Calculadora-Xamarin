@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora_Xamarin.MainPage">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resultText" 
+               FontSize="48" 
+               FontAttributes="Bold" 
+               TextColor="White" 
+               HorizontalTextAlignment="End" 
+               LineBreakMode="NoWrap" 
+               Grid.ColumnSpan="4" 
+               Text="0" 
+               VerticalTextAlignment="Center"
+               Grid.Row="0">
+        </Label>
+        
+        <!--Linha 1 botões 7,8,9 e /-->
+        
+        <Button Text="7" 
+                Grid.Row="1" 
+                Grid.Column="0"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="8" 
+                Grid.Row="1" 
+                Grid.Column="1"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="9" 
+                Grid.Row="1" 
+                Grid.Column="2"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="/" 
+                Grid.Row="1" 
+                Grid.Column="3"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="OnSelectOperator">
+        </Button>
+        
+         <!--Linha 2 botões 4,5,6 e x-->
+
+        <Button Text="4" 
+                Grid.Row="2" 
+                Grid.Column="0"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="5" 
+                Grid.Row="2" 
+                Grid.Column="1"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="6" 
+                Grid.Row="2" 
+                Grid.Column="2"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="X" 
+                Grid.Row="2" 
+                Grid.Column="3"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="OnSelectOperator">
+        </Button>
+        
+        <!--Linha 3 botões 1,2,3 e - -->
+
+        <Button Text="1" 
+                Grid.Row="3" 
+                Grid.Column="0"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="2" 
+                Grid.Row="3" 
+                Grid.Column="1"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="3" 
+                Grid.Row="3" 
+                Grid.Column="2"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="-" 
+                Grid.Row="3" 
+                Grid.Column="3"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="OnSelectOperator">
+        </Button>
+
+        <!--Linha 4 botões 0 e + -->
+
+        <Button Text="0" 
+                Grid.Row="4" 
+                Grid.Column="0"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontSize="36"
+                CornerRadius="0"
+                Grid.ColumnSpan="3"
+                Clicked="Numero">
+        </Button>
+
+        <Button Text="+" 
+                Grid.Row="4" 
+                Grid.Column="3"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Clicked="OnSelectOperator">
+        </Button>
+
+        <!--Linha 5 botões C e = -->
+
+        <Button Text="C" 
+                Grid.Row="5" 
+                Grid.Column="0"
+                BackgroundColor="Gray"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Grid.ColumnSpan="1"
+                Clicked="Limpar">
+        </Button>
+
+        <Button Text="=" 
+                Grid.Row="5" 
+                Grid.Column="1"
+                BackgroundColor="Orange"
+                TextColor="White"
+                FontSize="36"
+                CornerRadius="0"
+                Grid.ColumnSpan="3"
+                Clicked="OnCalculate">
+        </Button>
+
+
+
+
+    </Grid>
+    
+
+</ContentPage>
